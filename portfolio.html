@@ -1,114 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>politfolio</title>
-    <a href="index.html">Back to Home</a>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Selected graphic design, branding, and digital design work by Steven Byiringiro.">
+  <title>Selected Work | Steven Byiringiro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <style>
-        .portfolio{
-  background:#ffffff;
-  padding:80px 5%;
-  color:#121512;
-}
-.portfolio-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:40px;
-}
-.portfolio-header h2{
-  font-size:28px;
-  font-weight:700;
-}
-.portfolio-header h2 span{
-  color:#8FD14F;
-}
-.portfolio-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px 30px;
-}
-.work-item img{
-  width:100%;
-  height:280px;
-  object-fit:cover;
-  border-radius:12px;
-  filter:grayscale(100%);
-  transition:0.4s;
-  background:#eee;
-}
-.work-item:hover img{
-  filter:grayscale(0%);
-}
-.tag{
-  display:inline-block;
-  background:#8FD14F;
-  color:#121512;
-  font-size:10px;
-  padding:5px 10px;
-  border-radius:20px;
-  font-weight:600;
-  margin:14px 0 8px;
-}
-.work-item h3{
-  font-size:18px;
-  font-weight:700;
-}
-.divider-dark{
-  color:#ddd;
-  font-size:10px;
-  letter-spacing:2px;
-  margin-top:60px;
-  overflow:hidden;
-  white-space:nowrap;
-}
+<body class="portfolio-page">
+  <header class="portfolio-nav">
+    <a class="portfolio-logo" href="index.html" aria-label="Steven Byiringiro home">S&B</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="serviceses.html">Services</a>
+      <a href="portfolio.html" aria-current="page">Portfolio</a>
+      <a class="portfolio-contact-link" href="contact.html">Let's talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
 
-@media(max-width:900px){
-  .portfolio-grid{
-    grid-template-columns:1fr;
-  }
-}
-    </style>
-<section class="portfolio">
-  <div class="portfolio-header">
-    <div>
-      <p class="small-green">Works</p>
-      <h2>My Works <span>Portfolio.</span></h2>
-    </div>
-    <button class="btn-outline-dark">⊕ View All Services</button>
-  </div>
+  <main>
+    <section class="portfolio-intro">
+      <p class="eyebrow"><span></span> SELECTED WORK</p>
+      <h1>Design that gives<br>brands <em>character.</em></h1>
+      <div class="portfolio-intro-bottom">
+        <p>A few creative directions across identity, digital design, and illustration.</p>
+        <a href="#projects">Explore projects <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="portfolio-note">Starter template: replace the sample images and descriptions with your own projects before publishing.</p>
+    </section>
 
-  <div class="portfolio-grid">
-    <div class="work-item">
-      <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=600" alt="TechNova">
-      <span class="tag">Branding & Identity</span>
-      <h3>TechNova Inc</h3>
-    </div>
+    <section class="portfolio-projects" id="projects" aria-label="Selected design projects">
+      <article class="project-card project-card-wide">
+        <a class="project-image" href="contact.html" aria-label="Ask about a brand identity project">
+          <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=1400&q=85" alt="Colorful brand identity and stationery arranged on a desk" loading="lazy">
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="project-caption">
+          <div><p class="project-type">BRAND IDENTITY · VISUAL SYSTEM</p><h2>Make a first impression</h2></div>
+          <p>A flexible identity concept built around confident color and clear typography.</p>
+        </div>
+      </article>
 
-    <div class="work-item">
-      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600" alt="LuxWear">
-      <span class="tag">UI/UX Design</span>
-      <h3>LuxWear</h3>
-    </div>
+      <article class="project-card">
+        <a class="project-image" href="contact.html" aria-label="Ask about a digital design project">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=85" alt="Creative team collaborating around a table" loading="lazy">
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="project-caption">
+          <div><p class="project-type">DIGITAL DESIGN · UI/UX</p><h2>A clearer digital experience</h2></div>
+          <p>A sample direction for organizing a product experience around its users.</p>
+        </div>
+      </article>
 
-    <div class="work-item">
-      <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600" alt="InnovateNow">
-      <span class="tag">Illustrations</span>
-      <h3>InnovateNow</h3>
-    </div>
+      <article class="project-card">
+        <a class="project-image" href="contact.html" aria-label="Ask about an illustration project">
+          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1000&q=85" alt="Colorful paintings and art supplies in a studio" loading="lazy">
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="project-caption">
+          <div><p class="project-type">ILLUSTRATION · CAMPAIGN ART</p><h2>Color with a purpose</h2></div>
+          <p>A sample art direction for bringing a campaign idea to life.</p>
+        </div>
+      </article>
+    </section>
 
-    <div class="work-item">
-      <img src="https://images.unsplash.com/photo-1583524505974-6facd53f4597?w=600" alt="FitFlex">
-      <span class="tag">Marketing Design</span>
-      <h3>FitFlex</h3>
-    </div>
-  </div>
+    <section class="portfolio-cta">
+      <p class="eyebrow"><span></span> HAVE A PROJECT IN MIND?</p>
+      <div class="portfolio-cta-row">
+        <h2>Let's make something<br><em>memorable.</em></h2>
+        <a href="contact.html" class="portfolio-cta-button">Start a conversation <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
 
-  <div class="divider-dark">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-</section>
-    
+  <footer class="portfolio-footer">
+    <a href="index.html">Steven Byiringiro</a>
+    <p>Graphic designer · Rwanda</p>
+    <a href="contact.html">Get in touch ↗</a>
+  </footer>
 </body>
 </html>
