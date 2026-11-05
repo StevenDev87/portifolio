@@ -589,5 +589,15 @@ a.contact-option:hover {
   .service-grid,
   .contact-options {
     grid-template-columns: 1fr;
-  }
-}
+  }}
+    .service-card { transition: all 0.4s ease; cursor: pointer; }
+    .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); background: #1a1a1a !important; }
+    .service-card:hover h3, .service-card:hover p { color: white !important; }
+    .service-card:hover .icon { background: #8ec928; color: black; }
+    .service-card:hover img { transform: scale(1.08); }
+    .service-card img { transition: all 0.5s ease; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .badge { animation: float 3s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+  

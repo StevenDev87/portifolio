@@ -2,60 +2,101 @@
 <html>
 <head>
   <script src="https://cdn.tailwindcss.com"></script>
-   <a href="index.html">Back to Home</a>
- 
 </head>
+<body id="mainBody" class="bg-white p-6 md:p-12 font-sans transition-all duration-500">
 
-<body class="bg-white p-6 md:p-12 font-sans">
-
-  <p class="text-xs">our service</p>
-  <h2 class="text-2xl mt-6 mb-8">My expertise <span class="text-[#8aa653]">Area</span></h2>
-
-  <div class="grid md:grid-cols-2 gap-6 max-w-[900px]">
-
-    <!-- LEFT COLUMN -->
-    <div class="space-y-6">
-      <!-- Card 1 -->
-      <div class="bg-[#e5e5e5] rounded-xl p-4 flex gap-4 items-center">
-        <img src="./byiringiro.jpeg" class="w-[130px] h-[140px] object-cover rounded-xl">
-        <div>
-          <h3 class="text-xl leading-tight">Branding & Logo Design</h3>
-          <p class="text-[11px] mt-3 text-center">Build a powerful brand identity that stands out!</p>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-[#e5e5e5] rounded-xl p-4 flex gap-4 items-center">
-        <img src="./photo.jpg" class="w-[130px] h-[140px] object-cover rounded-xl">
-        <div>
-          <h3 class="text-xl leading-tight">Web Design &<br>Development</h3>
-          <p class="text-[11px] mt-3 text-center">Creative, modern, and functional websites!</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT COLUMN - Yamanutse hasi gato -->
-    <div class="space-y-6 md:mt-16">
-      <!-- Card 3 -->
-      <div class="bg-[#e5e5e5] rounded-xl p-4 flex gap-4 items-center">
-        <img src="./byiringiro.jpeg" class="w-[130px] h-[140px] object-cover rounded-xl">
-        <div>
-          <h3 class="text-xl">UI/UX Design</h3>
-          <p class="text-[11px] mt-3 text-center">User-friendly and visually appealing interfaces!</p>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="bg-[#e5e5e5] rounded-xl p-4 flex gap-4 items-center">
-        <img src="./STEVEN.png" class="w-[130px] h-[140px] object-cover rounded-xl">
-        <div>
-          <h3 class="text-xl leading-tight">Illustration & Digital Art</h3>
-          <p class="text-[11px] mt-3 text-center">Unique artwork that makes your brand shine!</p>
-        </div>
-      </div>
-    </div>
-
+  <div class="flex justify-between items-center">
+    <a href="index.html" class="inline-block bg-black text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-[#7aa31a] transition">← Back to Home</a>
+    <button id="darkBtn" onclick="toggleDark()" class="bg-black text-white px-5 py-2 rounded-full text-xs font-bold transition hover:bg-[#7aa31a]">🌙 Dark Mode</button>
   </div>
+
+  <p class="text-xs tracking-[3px] font-bold text-gray-500 mt-8">● OUR SERVICE</p>
+  <h2 id="mainTitle" class="text-3xl md:text-5xl font-black mt-3">My expertise <span id="typing" class="text-[#8aa653]"></span><span class="animate-pulse">|</span></h2>
+  <p id="subTitle" class="text-gray-500 text-sm mt-2">I build brands that people remember. Click any card 👇</p>
+
+  <div class="flex gap-2 mt-6">
+    <button onclick="filterService('all', this)" class="filter-btn bg-black text-white px-5 py-2 rounded-full text-xs font-bold transition">All</button>
+    <button onclick="filterService('design', this)" class="filter-btn bg-gray-100 px-5 py-2 rounded-full text-xs font-bold transition">Design</button>
+    <button onclick="filterService('web', this)" class="filter-btn bg-gray-100 px-5 py-2 rounded-full text-xs font-bold transition">Web & Art</button>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-6 max-w-[900px] mt-6">
+    <div class="space-y-6">
+      <div class="card reveal opacity-0 translate-y-8 transition-all duration-500 bg-[#e5e5e5] rounded-[20px] p-4 flex gap-4 items-center cursor-pointer hover:-translate-y-2 hover:shadow-2xl group" data-cat="design" onclick="clickCard(this, 'Branding & Logo Design','I create logos and full brand identity that make your business look big, trusted and professional.')">
+        <div class="relative shrink-0 overflow-hidden rounded-xl">
+          <img src="./byiringiro.jpeg" class="w-[130px] h-[140px] object-cover rounded-xl transition duration-500 group-hover:scale-110">
+          <span class="absolute top-2 left-2 bg-white px-2 py-1 rounded-full text-[10px] font-black">01</span>
+        </div>
+        <div>
+          <span class="bg-black text-white w-9 h-9 rounded-full flex items-center justify-center text-base mb-2 transition">🎨</span>
+          <h3 class="card-title text-xl leading-tight font-bold">Branding & Logo Design</h3>
+          <p class="card-desc text-[11px] mt-2 text-gray-500">Build a powerful brand identity that stands out!</p>
+          <p class="text-[#7aa31a] text-xs font-bold mt-2">Click Me →</p>
+        </div>
+      </div>
+
+      <div class="card reveal opacity-0 translate-y-8 transition-all duration-500 bg-[#e5e5e5] rounded-[20px] p-4 flex gap-4 items-center cursor-pointer hover:-translate-y-2 hover:shadow-2xl group" data-cat="web" onclick="clickCard(this, 'Web Design & Development','Modern, fast, mobile-friendly websites that bring you clients.')">
+        <div class="relative shrink-0 overflow-hidden rounded-xl">
+          <img src="./photo.jpg" class="w-[130px] h-[140px] object-cover rounded-xl transition duration-500 group-hover:scale-110">
+          <span class="absolute top-2 left-2 bg-white px-2 py-1 rounded-full text-[10px] font-black">02</span>
+        </div>
+        <div>
+          <span class="bg-black text-white w-9 h-9 rounded-full flex items-center justify-center text-base mb-2 transition">💻</span>
+          <h3 class="card-title text-xl leading-tight font-bold">Web Design &<br>Development</h3>
+          <p class="card-desc text-[11px] mt-2 text-gray-500">Creative, modern, and functional websites!</p>
+          <p class="text-[#7aa31a] text-xs font-bold mt-2">Click Me →</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-6 md:mt-16">
+      <div class="card reveal opacity-0 translate-y-8 transition-all duration-500 bg-[#e5e5e5] rounded-[20px] p-4 flex gap-4 items-center cursor-pointer hover:-translate-y-2 hover:shadow-2xl group" data-cat="design" onclick="clickCard(this, 'UI/UX Design','I design apps and websites that are easy to use.')">
+        <div class="relative shrink-0 overflow-hidden rounded-xl">
+          <img src="./byiringiro.jpeg" class="w-[130px] h-[140px] object-cover rounded-xl transition duration-500 group-hover:scale-110">
+          <span class="absolute top-2 left-2 bg-white px-2 py-1 rounded-full text-[10px] font-black">03</span>
+        </div>
+        <div>
+          <span class="bg-black text-white w-9 h-9 rounded-full flex items-center justify-center text-base mb-2 transition">📱</span>
+          <h3 class="card-title text-xl font-bold">UI/UX Design</h3>
+          <p class="card-desc text-[11px] mt-2 text-gray-500">User-friendly and visually appealing interfaces!</p>
+          <p class="text-[#7aa31a] text-xs font-bold mt-2">Click Me →</p>
+        </div>
+      </div>
+
+      <div class="card reveal opacity-0 translate-y-8 transition-all duration-500 bg-[#e5e5e5] rounded-[20px] p-4 flex gap-4 items-center cursor-pointer hover:-translate-y-2 hover:shadow-2xl group" data-cat="web" onclick="clickCard(this, 'Illustration & Digital Art','Custom drawings, posters and digital art that make your brand shine.')">
+        <div class="relative shrink-0 overflow-hidden rounded-xl">
+          <img src="./STEVEN.png" class="w-[130px] h-[140px] object-cover rounded-xl transition duration-500 group-hover:scale-110">
+          <span class="absolute top-2 left-2 bg-white px-2 py-1 rounded-full text-[10px] font-black">04</span>
+        </div>
+        <div>
+          <span class="bg-black text-white w-9 h-9 rounded-full flex items-center justify-center text-base mb-2 transition">✏️</span>
+          <h3 class="card-title text-xl leading-tight font-bold">Illustration & Digital Art</h3>
+          <p class="card-desc text-[11px] mt-2 text-gray-500">Unique artwork that makes your brand shine!</p>
+          <p class="text-[#7aa31a] text-xs font-bold mt-2">Click Me →</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal opacity-0 translate-y-8 transition-all duration-700 mt-10 max-w-[900px] bg-black text-white rounded-[24px] p-6 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div>
+      <h3 class="text-xl font-black">Need a design? Let's build your brand today.</h3>
+      <p class="text-gray-400 text-sm">Free consultation • Fast delivery • <span id="counter">0</span>+ Happy Clients</p>
+    </div>
+    <a href="https://wa.me/250788000000" class="bg-[#8ec928] text-black px-6 py-3 rounded-full font-black text-sm shrink-0 hover:bg-white transition animate-bounce">💬 Order on WhatsApp</a>
+  </div>
+
+  <div id="popup" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-[24px] p-8 max-w-sm w-full text-center">
+      <h3 id="popupTitle" class="text-2xl font-black"></h3>
+      <p id="popupText" class="text-gray-600 text-sm mt-3 leading-relaxed"></p>
+      <a href="https://wa.me/250788000000" class="block mt-6 bg-[#8ec928] py-3 rounded-xl font-black text-sm">Order This Service →</a>
+      <button onclick="closePopup()" class="mt-2 w-full py-3 bg-gray-100 rounded-xl font-bold text-sm">Close</button>
+    </div>
+  </div>
+
+  <!-- 👇 THIS IS THE LINK -->
+  <script src="./index.js"></script>
 
 </body>
 </html>
