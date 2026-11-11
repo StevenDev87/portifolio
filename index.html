@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steven Byiringiro - Graphic Designer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif}
+  .glass{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15)}
+  .marquee{animation:marquee 18s linear infinite} @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .float{animation:float 3s ease-in-out infinite} @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .skill-bar{width:0;transition:width 1.2s ease}
+  .card{transition:.3s} .card:hover{transform:translateY(-6px)}
+</style>
+</head>
+<body class="bg-[#2C2727] text-white font-sans overflow-x-hidden">
+
+<!-- NAV -->
+<nav class="bg-[#171A17]/95 backdrop-blur sticky top-0 z-50 px-6 md:px-16 py-3 flex justify-between items-center shadow-lg">
+  <a href="#home" class="bg-[#8AC826] text-black font-black text-xl w-12 h-12 rounded-xl flex items-center justify-center">S&B</a>
+  <div class="hidden lg:flex items-center gap-7 text-[14px] font-medium">
+    <a href="#home" class="text-[#8AC826]">Home</a>
+    <a href="./About us.html" class="hover:text-[#8AC826]">About us</a>
+    <a href="./serviceses.html" class="hover:text-[#8AC826]">Services</a>
+    <a href="./portfolio.html" class="hover:text-[#8AC826]">Portfolio</a>
+    <a href="./contact.html" class="hover:text-[#8AC826]">Contact</a>
+    <a href="#contact" class="bg-[#8AC826] text-black px-5 py-2.5 rounded-full font-bold text-sm">Contact us ✈️</a>
+  </div>
+  <button onclick="document.getElementById('m').classList.toggle('hidden')" class="lg:hidden text-2xl">☰</button>
+</nav>
+<div id="m" class="hidden lg:hidden bg-[#171A17] px-6 py-5 flex flex-col gap-4 text-center">
+  <a href="#home">Home</a><a href="#about">About us</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#contact" class="bg-[#8AC826] text-black py-3 rounded-full font-bold">Let's Talk ✈️</a>
+</div>
+
+<!-- HOME -->
+<section id="home" class="relative w-full min-h-[90vh] flex items-center px-6 md:px-16 overflow-hidden py-10">
+  <div class="absolute top-4 left-0 w-full overflow-hidden opacity-[0.12] pointer-events-none"><div class="marquee text-[13vw] font-black whitespace-nowrap flex"><span class="pr-8">BYIRINGIRO STEVEN • BYIRINGIRO STEVEN •&nbsp;</span><span class="pr-8">BYIRINGIRO STEVEN • BYIRINGIRO STEVEN •&nbsp;</span></div></div>
+  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#8AC826]/20 rounded-full blur-[120px]"></div>
+  <img src="./STEVEN.png" class="absolute bottom-0 left-1/2 -translate-x-1/2 h-[88%] w-auto object-contain z-10 pointer-events-none drop-shadow-2xl" alt="Steven">
+  <div class="relative z-20 w-full grid md:grid-cols-3 items-center gap-10">
+    <div class="space-y-5">
+      <p class="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-sm"><span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span> Available for work</p>
+      <p class="text-sm">I'm a <span class="text-[#8FD14F] font-bold">graphic designer</span></p>
+      <h1 class="text-5xl md:text-[64px] font-black leading-[0.95]">Stand Out<br>in Every<br><span id="typing" class="text-[#8FD14F]"></span><span class="animate-pulse">|</span></h1>
+      <p class="text-gray-300 text-sm max-w-[320px]">I help brands in Rwanda & worldwide look bold, modern and unforgettable.</p>
+      <div class="flex gap-3 flex-wrap"><a href="#contact" class="bg-[#8FD14F] text-black px-6 py-3.5 rounded-full text-sm font-bold">Collaborate With Me →</a><a href="#portfolio" class="border border-white/30 px-6 py-3.5 rounded-full text-sm font-bold">View Work</a></div>
+    </div>
+    <div class="hidden md:block"></div>
+    <div class="space-y-4 md:text-right">
+      <div class="float glass rounded-2xl p-4 inline-block text-left"><p class="text-sm font-bold">Brand identity</p><p class="text-xs text-gray-300">Logos, colors & visual systems</p></div><br>
+      <div class="float glass rounded-2xl p-4 inline-block text-left" style="animation-delay:1s"><p class="text-sm font-bold">Digital design</p><p class="text-xs text-gray-300">Websites & social media graphics</p></div><br>
+      <a href="#services" class="inline-block mt-4 text-xs tracking-widest text-gray-300 hover:text-[#8FD14F]">VIEW SERVICES ↗</a>
+    </div>
+  </div>
+</section>
+<div class="bg-[#8AC826] text-black overflow-hidden py-3 -rotate-1 scale-105"><div class="marquee flex whitespace-nowrap font-bold text-sm"><span>✦ BRANDING ✦ LOGO ✦ UI/UX ✦ WEB DESIGN ✦ ILLUSTRATION ✦ MOTION ✦&nbsp;</span><span>✦ BRANDING ✦ LOGO ✦ UI/UX ✦ WEB DESIGN ✦ ILLUSTRATION ✦ MOTION ✦&nbsp;</span></div></div>
+
+<!-- ABOUT -->
+<section id="about" class="bg-[#fafafa] text-[#111] py-20 px-6 md:px-16">
+  <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div class="relative"><div class="absolute -top-4 -left-4 w-full h-full border-2 border-[#8ec928] rounded-[20px]"></div><img src="photo.jpg" class="relative w-full h-[480px] object-cover rounded-[20px] shadow-2xl"><div class="absolute -bottom-5 right-4 bg-white rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3"><span class="text-3xl font-black text-[#7aa31a]">5+</span><span class="text-xs font-semibold text-gray-600">Years of<br>Experience</span></div></div>
+    <div><span class="bg-[#eef7d8] text-[#5a7a10] font-bold text-[13px] px-4 py-1.5 rounded-full">● ABOUT US</span><h2 class="text-[32px] md:text-[42px] font-extrabold leading-[1.15] mt-5">Design represents your brand, engaging audiences and <span class="text-[#7aa31a]">telling your story.</span></h2><p class="text-gray-500 mt-4">I help brands look premium, feel human and grow faster — through branding, UI/UX and web design that people remember.</p>
+      <div class="flex gap-5 mt-8 bg-white p-4 rounded-2xl shadow-sm border border-gray-100"><img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=300" class="w-[110px] h-[120px] rounded-xl object-cover"><div><h4 class="font-bold">The Journey of Byiringiro Steven</h4><p class="text-gray-500 text-[13px] mt-2">My journey as a product designer began with a fascination for solving problems through creative solutions.</p></div></div>
+      <div class="flex gap-6 mt-6"><div><p class="font-black text-xl">120+</p><p class="text-gray-500 text-xs">Happy Clients</p></div><div><p class="font-black text-xl">150+</p><p class="text-gray-500 text-xs">Projects Done</p></div><div><p class="font-black text-xl">50+</p><p class="text-gray-500 text-xs">Brands Created</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME / SKILLS / EXPERIENCE -->
+<section class="bg-[#121212] py-20 px-6 md:px-16">
+  <div class="max-w-[1200px] mx-auto">
+    <div class="flex flex-col md:flex-row justify-between md:items-end gap-6"><div><p class="text-[#c4f17b] font-semibold">My Resume</p><h2 class="text-white text-[36px] md:text-[44px] font-extrabold leading-tight">All over my personal details<br><span class="text-[#8ec928]">find here.</span></h2></div><a href="your-cv.pdf" download class="bg-[#8ec928] hover:bg-white text-black text-xs font-bold px-6 py-3.5 rounded-full">DOWNLOAD CV ↓</a></div>
+    <h2 class="text-[#c4f17b] text-4xl md:text-5xl font-extrabold mt-14 mb-10">Skills.</h2><div id="skills" class="grid md:grid-cols-2 gap-6"></div>
+    <h2 class="text-[#c4f17b] text-4xl md:text-5xl font-extrabold mt-16 mb-8">Experience.</h2>
+    <div class="bg-[#1a1a1a] border border-[#2a2a2a] rounded-[24px] grid md:grid-cols-3 overflow-hidden">
+      <div class="p-8 md:border-r border-[#2a2a2a]"><span class="bg-[#8ec928] text-black text-[11px] font-bold px-3 py-1 rounded-full">2018 - 2020</span><h3 class="text-white font-bold my-5">Graphic Designer<br>Agency Work</h3><p class="text-gray-400 text-[13px]">Designed <b class="text-white">50+ branding projects</b> for startups and businesses.</p></div>
+      <div class="p-8 md:border-r border-[#2a2a2a]"><span class="bg-white text-black text-[11px] font-bold px-3 py-1 rounded-full">2020 - 2022</span><h3 class="text-white font-bold my-5">Graphic Design<br>Intern</h3><p class="text-gray-400 text-[13px]">Marketing materials for <b class="text-white">social media & print ads.</b></p></div>
+      <div class="p-8"><span class="bg-white text-black text-[11px] font-bold px-3 py-1 rounded-full">2022 - Now</span><h3 class="text-white font-bold my-5">UI/UX Designer<br>Freelance</h3><p class="text-gray-400 text-[13px]">Led UI/UX for <b class="text-white">e-commerce & SaaS platforms.</b></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="bg-white text-black p-5 md:px-16 py-16">
+  <p class="text-[11px] tracking-widest text-gray-500">• OUR SERVICE</p>
+  <h1 class="text-5xl font-black mt-2">My expertise <span id="t" class="text-[#8aa653]"></span>|</h1>
+  <p class="text-gray-500 text-sm">I build brands that people remember. Click any card 👇</p>
+  <div class="flex gap-2 mt-5 flex-wrap"><button onclick="filter('all')" class="bg-black text-white px-4 py-1.5 rounded-full text-xs">All</button><button onclick="filter('design')" class="bg-gray-100 px-4 py-1.5 rounded-full text-xs">Design</button><button onclick="filter('web')" class="bg-gray-100 px-4 py-1.5 rounded-full text-xs">Web & Art</button></div>
+  <div id="box" class="grid md:grid-cols-2 gap-4 mt-6 max-w-[850px]"></div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="bg-[#111] px-6 md:px-16 py-16">
+  <p class="text-[#8AC826] text-sm tracking-widest">● SELECTED WORK</p>
+  <h1 class="text-4xl md:text-6xl font-black mt-3 leading-tight">Design that gives<br>brands <em class="text-[#8AC826]">character.</em></h1>
+  <p class="text-gray-400 mt-4">A few creative directions across identity, digital design, and illustration.</p>
+  <div class="grid md:grid-cols-2 gap-6 mt-10">
+    <div class="card bg-[#1a1a1a] rounded-2xl overflow-hidden md:col-span-2"><img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=1400&q=85" class="w-full h-[320px] object-cover"><div class="p-6 flex justify-between"><div><p class="text-[#8AC826] text-xs">BRAND IDENTITY</p><h2 class="font-bold text-xl">Make a first impression</h2></div><a href="#contact" class="text-2xl">↗</a></div></div>
+    <div class="card bg-[#1a1a1a] rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=85" class="w-full h-[240px] object-cover"><div class="p-6"><p class="text-[#8AC826] text-xs">DIGITAL DESIGN • UI/UX</p><h2 class="font-bold text-xl">A clearer digital experience</h2></div></div>
+    <div class="card bg-[#1a1a1a] rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1000&q=85" class="w-full h-[240px] object-cover"><div class="p-6"><p class="text-[#8AC826] text-xs">ILLUSTRATION • CAMPAIGN</p><h2 class="font-bold text-xl">Color with a purpose</h2></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-[#111] px-6 md:px-16 py-16">
+  <p class="text-[#8AC826] tracking-widest text-sm">● LET'S WORK TOGETHER</p>
+  <h1 class="text-4xl md:text-6xl font-black mt-3 leading-tight">Have an idea?<br>Let's make it <em class="text-[#8AC826]">real.</em></h1>
+  <p class="text-gray-400 mt-4 max-w-[500px]">Tell me a little about your project. Email is the best way to get started.</p>
+  <div class="grid md:grid-cols-3 gap-4 mt-10">
+    <a href="mailto:stevenbyiringiro87@gmail.com" class="bg-[#1a1a1a] rounded-2xl p-6 hover:bg-[#8AC826] hover:text-black transition"><p class="text-xs text-gray-400">EMAIL</p><p class="font-bold mt-2 break-all">stevenbyiringiro87@gmail.com</p><p class="mt-3">↗</p></a>
+    <a href="tel:0792102362" class="bg-[#1a1a1a] rounded-2xl p-6 hover:bg-[#8AC826] hover:text-black transition"><p class="text-xs text-gray-400">PHONE</p><p class="font-bold mt-2">079 210 2362</p><p class="mt-3">↗</p></a>
+    <a href="https://wa.me/250792102362" class="bg-[#8AC826] text-black rounded-2xl p-6"><p class="text-xs">WHATSAPP</p><p class="font-bold mt-2">Chat Now on WhatsApp</p><p class="mt-3">↗</p></a>
+  </div>
+  <form onsubmit="sendMsg(event)" class="bg-[#1a1a1a] rounded-2xl p-6 mt-8 max-w-[600px] space-y-3">
+    <input id="fName" required placeholder="Your Name" class="w-full bg-[#222] p-3 rounded-xl outline-none">
+    <input id="fMsg" required placeholder="What do you need? e.g. Logo, Website..." class="w-full bg-[#222] p-3 rounded-xl outline-none">
+    <button class="w-full bg-[#8AC826] text-black font-bold py-3 rounded-xl">Send on WhatsApp →</button>
+  </form>
+  <p class="text-gray-400 mt-6 text-sm">Based in Rwanda • Available for remote projects</p>
+</section>
+
+<footer class="bg-black px-6 md:px-16 py-6 flex justify-between text-sm text-gray-400"><span>Steven Byiringiro</span><span>Graphic designer • Rwanda</span><a href="#contact" class="text-[#8AC826]">Get in touch ↗</a></footer>
+
+<!-- MODAL -->
+<div id="modal" class="fixed inset-0 bg-black/70 hidden items-center justify-center p-5 z-[100]"><div class="bg-white text-black rounded-2xl max-w-sm w-full p-6 relative"><button onclick="closeModal()" class="absolute top-3 right-4 text-xl">✕</button><h3 id="modalTitle" class="font-black text-xl"></h3><p id="modalDesc" class="text-gray-500 text-sm mt-2"></p><a href="https://wa.me/250792102362" class="block text-center bg-[#8cc63f] font-bold py-3 rounded-full mt-5 text-sm">Order This on WhatsApp</a></div></div>
+
+<script>
+// TYPING HOME
+let words=["Pixel.","Brand.","Story."],wi=0,ci=0,del=false;
+setInterval(()=>{let w=words[wi]; if(!del){ci++; if(ci===w.length) del=true;}else{ci--; if(ci===0){del=false; wi=(wi+1)%words.length;}} document.getElementById('typing').textContent=w.slice(0,ci);},150);
+// TYPING SERVICES
+let w2=["Work","Design","Brands"],i2=0,j2=0; setInterval(()=>{j2++; if(j2>w2[i2].length){j2=0;i2=(i2+1)%w2.length} document.getElementById('t').textContent=w2[i2].slice(0,j2)},150);
+// SERVICES
+const data=[
+ {n:"01",t:"Branding & Logo Design",d:"Build a powerful brand identity that stands out! Logos, colors and full branding.",c:"design",img:"https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400",icon:"🎨"},
+ {n:"02",t:"Web Design & Development",d:"Creative, modern, and functional websites for business & shops.",c:"web",img:"https://images.unsplash.com/photo-1547658719-da2b51169166?w=400",icon:"🌐"},
+ {n:"03",t:"UI/UX Design",d:"User-friendly and visually appealing interfaces for apps & websites.",c:"design",img:"https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400",icon:"💻"},
+ {n:"04",t:"Illustration & Digital Art",d:"Unique artwork that makes your brand shine! Posters & digital art.",c:"web",img:"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400",icon:"✏️"},
+];
+document.getElementById('box').innerHTML=data.map(s=>`<div class="card bg-[#eee] rounded-2xl p-4 flex gap-4" data-c="${s.c}"><div class="relative shrink-0"><img src="${s.img}" class="w-[105px] h-[130px] object-cover rounded-xl"><span class="absolute top-1 left-1 bg-white text-[10px] px-2 rounded-full font-bold">${s.n}</span></div><div><div class="w-9 h-9 bg-black text-white rounded-full flex items-center justify-center">${s.icon}</div><h3 class="font-bold mt-2">${s.t}</h3><p class="text-xs text-gray-500">${s.d}</p><button onclick="openModal('${s.t}','${s.d}')" class="text-[#8aa653] text-xs font-bold mt-2">Click Me →</button></div></div>`).join('');
+function filter(f){document.querySelectorAll('.card').forEach(c=>{if(c.dataset.c) c.style.display=(f==='all'||c.dataset.c===f)?'flex':'none'})}
+function openModal(t,d){document.getElementById('modalTitle').textContent=t;document.getElementById('modalDesc').textContent=d;let m=document.getElementById('modal');m.classList.remove('hidden');m.classList.add('flex');}
+function closeModal(){let m=document.getElementById('modal');m.classList.add('hidden');m.classList.remove('flex');}
+// SKILLS
+const skills=[
+ {t:"Graphic & Branding Design",d:"From <b class='text-white'>logo creation</b> to <b class='text-white'>complete brand identity systems</b>, I ensure consistency and uniqueness.",p:75},
+ {t:"UI/UX Design",d:"I focus on <b class='text-white'>usability, accessibility and interaction design</b>, ensuring seamless navigation.",p:85},
+ {t:"Illustration & Digital Art",d:"Bringing ideas to life through <b class='text-white'>custom illustrations and vector artwork</b> for branding, web and social media.",p:90},
+ {t:"Web Design & Development",d:"Designing <b class='text-white'>websites that provide seamless user experience</b>. Modern, responsive and optimized for conversions.",p:65},
+];
+document.getElementById('skills').innerHTML=skills.map(s=>`<div class="card bg-[#1e2420] rounded-2xl p-7"><h3 class="text-white font-semibold">${s.t}</h3><p class="text-gray-400 text-[13px] mt-3">${s.d}</p><div class="mt-6 flex justify-between text-sm"><span class="text-gray-400">Expertise</span><span class="text-[#8ec928] font-bold">${s.p}%</span></div><div class="w-full h-[4px] bg-white/10 rounded-full overflow-hidden mt-1"><div class="skill-bar h-full bg-[#8ec928]" data-w="${s.p}"></div></div></div>`).join('');
+// Animate skill bars on scroll
+window.addEventListener('scroll',()=>{document.querySelectorAll('.skill-bar').forEach(b=>b.style.width=b.dataset.w+'%')});
+setTimeout(()=>document.querySelectorAll('.skill-bar').forEach(b=>b.style.width=b.dataset.w+'%'),800);
+// CONTACT FORM
+function sendMsg(e){e.preventDefault();let n=document.getElementById('fName').value;let m=document.getElementById('fMsg').value;window.open('https://wa.me/250792102362?text='+encodeURIComponent('Hello Steven, I am '+n+'. I need: '+m));}
+</script>
+</body>
+</html>
