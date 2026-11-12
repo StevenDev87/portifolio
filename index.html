@@ -9,24 +9,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style>
-  *{font-family:'Inter',sans-serif}
-  html{scroll-behavior:smooth}
-  body{background:#2C2727}
-  .glass{background:rgba(255,255,255,.08);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15)}
-  .marquee{animation:marquee 18s linear infinite}
-  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  .float{animation:float 3.5s ease-in-out infinite}
-  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-  .fade-up{animation:fadeUp .8s ease both}
-  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-  .skill-bar{width:0;transition:width 1.4s ease}
-  .card{transition:.35s} .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.25)}
-  .service-card{transition:.35s} .service-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.12)}
-  .nav-link{position:relative} .nav-link:after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:#8AC826;transition:.3s}
-  .nav-link:hover:after{width:100%}
-  ::-webkit-scrollbar{width:8px} ::-webkit-scrollbar-thumb{background:#8AC826;border-radius:99px}
-</style>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body class="text-white overflow-x-hidden">
 
